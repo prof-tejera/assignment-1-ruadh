@@ -1,9 +1,9 @@
 import React from "react";
 
-const DisplayTime = ({ text}) => {
+const DisplayTime = ({ text, children}) => {
   return (
     <div>
-      {text}
+    {children} {text}
     </div>
   );
 };
