@@ -18,3 +18,44 @@ th {
   text-align: left;
   padding: 8px;
 }
+
+.timer {
+  background-color: navy;
+  border-radius: 3%;
+  padding: 3rem;
+  border: 1px solid gray;
+  margin: 10px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.display {
+  background-color: white;
+  color: navy;
+  border: 1px solid navy;
+  text-align: right;
+  font-size: xx-large;
+  margin-bottom: 10px;
+  padding-right: 1.5rem;
+  border-radius: 0.2rem;
+}
+
+button {
+  background-color: lightskyblue;
+  color: navy;
+  font-size: medium;
+  border-style: solid;
+  border-color: navy;
+  border-radius: 0.2rem;
+}
+
+button:hover {
+  background-color: mediumblue;
+  color: white;
+  border-color: navy;
+}
+
+button:active {
+  background-color: navy;
+  color: lightskyblue;
+}

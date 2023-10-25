@@ -11,15 +11,21 @@ const XY = () => {
     const [currentTime, setCurrentTime] = useState('');
     const timer = useRef(null);
 
-    return <>
-        <DisplayTime text={currentSet}>Set: </DisplayTime>
-        <DisplayTime text={currentTime}>Time: </DisplayTime>
-        <Input value={currentSet} onChange={(e) => { setCurrentSet(e.target.value) }} />
-        <Input value={currentTime} onChange={(e) => { setCurrentTime(e.target.value) }} />
-        <Button text="Start" onClick={() => intervalTimer(timer, setCurrentTime, currentTime, setCurrentSet, currentSet)} />
-        <Button text="Reset" onClick={() => intervalTimer(timer, setCurrentTime, '', setCurrentSet, '')} />
-        <Button text=">>" onClick={() => intervalTimer(timer, setCurrentTime, 0, setCurrentSet, 0)} />
-    </>;
+    return <div className="timer">
+        <div className="display">
+            <DisplayTime text={currentSet}>Set: </DisplayTime>
+            <DisplayTime text={currentTime}>Time: </DisplayTime>
+        </div>
+        <div className="inputs">
+            <Input type="number" value={currentSet} onChange={(e) => { setCurrentSet(e.target.value) }} />
+            <Input type="number" value={currentTime} onChange={(e) => { setCurrentTime(e.target.value) }} />
+        </div>
+        <div className="buttons">
+            <Button text="Start" onClick={() => intervalTimer(timer, currentTime, currentSet, setCurrentTime, setCurrentSet)} />
+            <Button text="Reset" onClick={() => intervalTimer(timer, '', '', setCurrentTime, setCurrentSet)} />
+            <Button text=">>" onClick={() => intervalTimer(timer, 0, 0, setCurrentTime, setCurrentSet)} />
+        </div>
+    </div>;
 
 };
 

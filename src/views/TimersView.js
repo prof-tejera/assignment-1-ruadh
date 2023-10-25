@@ -27,13 +27,13 @@ const TimersView = () => {
     { title: "Stopwatch", C: <Stopwatch /> },
     { title: "Countdown", C: <Countdown /> },
     { title: "XY", C: <XY /> },
-    { title: "Tabata", C: <Tabata active='5' rest='2'/> },
+    { title: "Tabata", C: <Tabata work='5' rest='2'/> },
   ];
 
   return (
     <Timers>
       {timers.map((timer) => (
-        <Timer key={`timer-${timer.title}`}>
+        <Timer key={`timer-${timer.title}` }>
           <TimerTitle>{timer.title}</TimerTitle>
           {timer.C}
         </Timer>
