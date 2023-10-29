@@ -2,6 +2,44 @@
 // calculates number of minutes when passed in seconds. Things of this nature that you don't want to copy/paste
 // everywhere.
 
+const formatSeconds = (secs) => {
+        let hr = Math.floor(secs / 60).toString();
+        let min = (secs % 60).toString().padStart(2, '0');
+    return `${hr}:${min}`;
+}
+
+// TO DO:  refactor to merge with countUp?
+const countUp = (timer, setter, newTime, endTime) => {
+    clearInterval(timer.current);
+    if (newTime === 0) {
+        console.log(`running countUp`);
+        timer.current = setInterval(() => {
+            setter(newTime++);
+            if (newTime > endTime) {
+                clearInterval(timer.current);
+            }
+        }, 1000);
+    } else {
+        setter(newTime);
+    }
+}
+
+const countDown = (timer, setter, newTime) => {
+    clearInterval(timer.current);
+    if (newTime > 0) {
+        console.log(`running countDown`);
+        timer.current = setInterval(() => {
+            setter(newTime--);
+            if (newTime < 0) {
+                clearInterval(timer.current);
+            }
+        }, 1000);
+    } else {
+        setter(newTime);
+    }
+}
+
+
 
 const intervalTimer = (timer, time, set, timeSetter, setSetter) => {
     const originalTime = time;
@@ -24,44 +62,11 @@ const intervalTimer = (timer, time, set, timeSetter, setSetter) => {
             // Exit the loop
             if (time <= 0 && set <= 0) {
                 clearInterval(timer.current);
-                // TO DO:  maybe return a "done" status?
             }
         }, 1000);
     } else {
         timeSetter(time);
         setSetter(set);
-    }
-}
-
-
-const countDown = (timer, setter, newTime) => {
-    clearInterval(timer.current);
-    if (newTime > 0) {
-        console.log(`running countDown`);
-        timer.current = setInterval(() => {
-            setter(newTime--);
-            if (newTime < 0) {
-                clearInterval(timer.current);
-            }
-        }, 1000);
-    } else {
-        setter(newTime);
-    }
-}
-
-// TO DO:  refactor to merge with countUp?
-const countUp = (timer, setter, newTime, endTime) => {
-    clearInterval(timer.current);
-    if (newTime === 0) {
-        console.log(`running countUp`);
-        timer.current = setInterval(() => {
-            setter(newTime++);
-            if (newTime > endTime) {
-                clearInterval(timer.current);
-            }
-        }, 1000);
-    } else {
-        setter(newTime);
     }
 }
 
@@ -106,4 +111,4 @@ const tabataTimer = (timer, time, rest, set, phase, timeSetter, setSetter, phase
     }
 }
 
-export {countDown, countUp, intervalTimer, tabataTimer};
+export {countDown, countUp, intervalTimer, tabataTimer, formatSeconds};
