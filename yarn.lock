@@ -10,7 +10,14 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.18.6", "@babel/code-frame@^7.22.13", "@babel/code-frame@^7.8.3":
+"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.18.6", "@babel/code-frame@^7.8.3":
+  "integrity" "sha512-TDCmlK5eOvH+eH7cdAFlNXeVJqWIQ7gW9tY1GJIpUtFb6CmjVyq2VM3u71bOyR8CRihcCgMUYoDNyLXao3+70Q=="
+  "resolved" "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.18.6.tgz"
+  "version" "7.18.6"
+  dependencies:
+    "@babel/highlight" "^7.18.6"
+
+"@babel/code-frame@^7.22.13":
   "integrity" "sha512-XktuhWlJ5g+3TJXc5upd9Ks1HutSArik6jf2eAjYFyIOf4ej3RN+184cZbzDvbPnuTJIUhPKKJE3cIsYTiAT3w=="
   "resolved" "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.22.13.tgz"
   "version" "7.22.13"
@@ -73,14 +80,13 @@
     "semver" "^5.4.1"
     "source-map" "^0.5.0"
 
-"@babel/generator@^7.19.3", "@babel/generator@^7.23.0", "@babel/generator@^7.4.0", "@babel/generator@^7.9.0":
-  "integrity" "sha512-lN85QRR+5IbYrMWM6Y4pE/noaQtg4pNiqeNGX60eqOfo6gtEj6uw/JagelB8vVztSd7R6M5n1+PQkDbHbBRU4g=="
-  "resolved" "https://registry.npmjs.org/@babel/generator/-/generator-7.23.0.tgz"
-  "version" "7.23.0"
+"@babel/generator@^7.19.3", "@babel/generator@^7.4.0", "@babel/generator@^7.9.0":
+  "integrity" "sha512-fqVZnmp1ncvZU757UzDheKZpfPgatqY59XtW2/j/18H7u76akb8xqvjw82f+i2UKd/ksYsSick/BCLQUUtJ/qQ=="
+  "resolved" "https://registry.npmjs.org/@babel/generator/-/generator-7.19.3.tgz"
+  "version" "7.19.3"
   dependencies:
-    "@babel/types" "^7.23.0"
+    "@babel/types" "^7.19.3"
     "@jridgewell/gen-mapping" "^0.3.2"
-    "@jridgewell/trace-mapping" "^0.3.17"
     "jsesc" "^2.5.1"
 
 "@babel/helper-annotate-as-pure@^7.16.0", "@babel/helper-annotate-as-pure@^7.22.5":
@@ -148,7 +154,7 @@
   "resolved" "https://registry.npmjs.org/@babel/helper-environment-visitor/-/helper-environment-visitor-7.22.20.tgz"
   "version" "7.22.20"
 
-"@babel/helper-function-name@^7.22.5", "@babel/helper-function-name@^7.23.0":
+"@babel/helper-function-name@^7.19.0", "@babel/helper-function-name@^7.22.5":
   "integrity" "sha512-OErEqsrxjZTJciZ4Oo+eoZqeW9UIiOcuYKRJA4ZAgV9myA+pOXhhmpfNCKjEH/auVfEYVFJ6y1Tc4r0eIApqiw=="
   "resolved" "https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.23.0.tgz"
   "version" "7.23.0"
@@ -156,7 +162,7 @@
     "@babel/template" "^7.22.15"
     "@babel/types" "^7.23.0"
 
-"@babel/helper-hoist-variables@^7.22.5":
+"@babel/helper-hoist-variables@^7.18.6", "@babel/helper-hoist-variables@^7.22.5":
   "integrity" "sha512-wGjk9QZVzvknA6yKIUURb8zY3grXCcOZt+/7Wcy8O2uctxhplmUPkOdlgoNhmdVee2c92JXbf1xpMtVNbfoxRw=="
   "resolved" "https://registry.npmjs.org/@babel/helper-hoist-variables/-/helper-hoist-variables-7.22.5.tgz"
   "version" "7.22.5"
@@ -232,7 +238,7 @@
   dependencies:
     "@babel/types" "^7.22.5"
 
-"@babel/helper-split-export-declaration@^7.22.6":
+"@babel/helper-split-export-declaration@^7.18.6", "@babel/helper-split-export-declaration@^7.22.6":
   "integrity" "sha512-AsUnxuLhRYsisFiaJwvp1QF+I3KjD5FOxut14q/GzovUe6orHLesW2C7d754kRm53h5gqrz6sFl6sxc4BVtE/g=="
   "resolved" "https://registry.npmjs.org/@babel/helper-split-export-declaration/-/helper-split-export-declaration-7.22.6.tgz"
   "version" "7.22.6"
@@ -272,7 +278,7 @@
     "@babel/traverse" "^7.19.0"
     "@babel/types" "^7.19.0"
 
-"@babel/highlight@^7.22.13", "@babel/highlight@^7.8.3":
+"@babel/highlight@^7.18.6", "@babel/highlight@^7.22.13", "@babel/highlight@^7.8.3":
   "integrity" "sha512-dkdMCN3py0+ksCgYmGG8jKeGA/8Tk+gJwSYYlFGxG5lmhfKNoAy004YpLxpS1W2J8m/EK2Ew+yOs9pVRwO89mg=="
   "resolved" "https://registry.npmjs.org/@babel/highlight/-/highlight-7.22.20.tgz"
   "version" "7.22.20"
@@ -281,7 +287,7 @@
     "chalk" "^2.4.2"
     "js-tokens" "^4.0.0"
 
-"@babel/parser@^7.1.0", "@babel/parser@^7.19.3", "@babel/parser@^7.20.7", "@babel/parser@^7.22.15", "@babel/parser@^7.23.0", "@babel/parser@^7.4.3", "@babel/parser@^7.7.0", "@babel/parser@^7.9.0":
+"@babel/parser@^7.1.0", "@babel/parser@^7.19.3", "@babel/parser@^7.20.7", "@babel/parser@^7.22.15", "@babel/parser@^7.4.3", "@babel/parser@^7.7.0", "@babel/parser@^7.9.0":
   "integrity" "sha512-vvPKKdMemU85V9WE/l5wZEmImpCtLqbnTvqDS2U1fJ96KrxoW7KrXhNsNCblQlg8Ck4b85yxdTyelsMUgFUXiw=="
   "resolved" "https://registry.npmjs.org/@babel/parser/-/parser-7.23.0.tgz"
   "version" "7.23.0"
@@ -1274,18 +1280,18 @@
     "@babel/types" "^7.22.15"
 
 "@babel/traverse@^7.1.0", "@babel/traverse@^7.19.0", "@babel/traverse@^7.19.3", "@babel/traverse@^7.4.3", "@babel/traverse@^7.4.5", "@babel/traverse@^7.7.0", "@babel/traverse@^7.9.0":
-  "integrity" "sha512-azpe59SQ48qG6nu2CzcMLbxUudtN+dOM9kDbUqGq3HXUJRlo7i8fvPoxQUzYgLZ4cMVmuZgm8vvBpNeRhd6XSw=="
-  "resolved" "https://registry.npmjs.org/@babel/traverse/-/traverse-7.23.2.tgz"
-  "version" "7.23.2"
+  "integrity" "sha512-qh5yf6149zhq2sgIXmwjnsvmnNQC2iw70UFjp4olxucKrWd/dvlUsBI88VSLUsnMNF7/vnOiA+nk1+yLoCqROQ=="
+  "resolved" "https://registry.npmjs.org/@babel/traverse/-/traverse-7.19.3.tgz"
+  "version" "7.19.3"
   dependencies:
-    "@babel/code-frame" "^7.22.13"
-    "@babel/generator" "^7.23.0"
-    "@babel/helper-environment-visitor" "^7.22.20"
-    "@babel/helper-function-name" "^7.23.0"
-    "@babel/helper-hoist-variables" "^7.22.5"
-    "@babel/helper-split-export-declaration" "^7.22.6"
-    "@babel/parser" "^7.23.0"
-    "@babel/types" "^7.23.0"
+    "@babel/code-frame" "^7.18.6"
+    "@babel/generator" "^7.19.3"
+    "@babel/helper-environment-visitor" "^7.18.9"
+    "@babel/helper-function-name" "^7.19.0"
+    "@babel/helper-hoist-variables" "^7.18.6"
+    "@babel/helper-split-export-declaration" "^7.18.6"
+    "@babel/parser" "^7.19.3"
+    "@babel/types" "^7.19.3"
     "debug" "^4.1.0"
     "globals" "^11.1.0"
 
@@ -1550,7 +1556,7 @@
   "resolved" "https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.14.tgz"
   "version" "1.4.14"
 
-"@jridgewell/trace-mapping@^0.3.17", "@jridgewell/trace-mapping@^0.3.9":
+"@jridgewell/trace-mapping@^0.3.9":
   "integrity" "sha512-kf37QtfW+Hwx/buWGMPcR60iF9ziHa6r/CZJIHbmcm4+0qrXiVdxegAH0F6yddEVQ7zdkjcGCgCzUu+BcbhQxw=="
   "resolved" "https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.19.tgz"
   "version" "0.3.19"
@@ -7663,9 +7669,9 @@
   "version" "2.2.0"
 
 "object-inspect@^1.12.3", "object-inspect@^1.9.0":
-  "integrity" "sha512-HQ4J+ic8hKrgIt3mqk6cVOVrW2ozL4KdvHlqpBv9vDYWx9ysAgENAdvy4FoGF+KFdhR7nQTNm5J0ctAeOwn+3g=="
-  "resolved" "https://registry.npmjs.org/object-inspect/-/object-inspect-1.13.0.tgz"
-  "version" "1.13.0"
+  "integrity" "sha512-geUvdk7c+eizMNUDkRpW1wJwgfOiOeHbxBR/hLXK1aT6zmVSO0jsQcs7fj6MGw89jC/cjGfLcNOrtMYtGqm81g=="
+  "resolved" "https://registry.npmjs.org/object-inspect/-/object-inspect-1.12.3.tgz"
+  "version" "1.12.3"
 
 "object-is@^1.0.1":
   "integrity" "sha512-3cyDsyHgtmi7I7DfSSI2LDp6SK2lwvtbg0p0R1e0RvTqF5ceGx+K2dfSjm1bKDMVCFEDAQvy+o8c6a7VujOddw=="
@@ -10917,9 +10923,9 @@
   "version" "0.0.6"
 
 "typescript@^3.2.1", "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta":
-  "integrity" "sha512-w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q=="
-  "resolved" "https://registry.npmjs.org/typescript/-/typescript-3.9.10.tgz"
-  "version" "3.9.10"
+  "integrity" "sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w=="
+  "resolved" "https://registry.npmjs.org/typescript/-/typescript-5.2.2.tgz"
+  "version" "5.2.2"
 
 "unbox-primitive@^1.0.2":
   "integrity" "sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw=="
