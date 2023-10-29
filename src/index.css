@@ -27,6 +27,8 @@ th {
   margin: 10px;
   font-size: 1.5rem;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .display {
@@ -36,8 +38,18 @@ th {
   text-align: right;
   font-size: xx-large;
   margin-bottom: 10px;
-  padding-right: 1.5rem;
+  padding: 0.7rem 1.5rem 0.7rem 0.7rem;
   border-radius: 0.2rem;
+  min-height: 2.4rem;
+}
+
+.display, .buttons, .inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.display * {
+  flex-grow: 1;
 }
 
 button {
@@ -47,6 +59,9 @@ button {
   border-style: solid;
   border-color: navy;
   border-radius: 0.2rem;
+  padding: 0.2rem;
+  margin-top: 0.5rem;
+  flex-grow: 1;
 }
 
 button:hover {

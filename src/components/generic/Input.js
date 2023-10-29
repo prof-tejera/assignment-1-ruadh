@@ -6,6 +6,7 @@ const Input = ({ value='', type='number', onChange }) => {
     type={type}
     value={value}
     onChange={onChange}
+    min="1"
     >
     </input>
   );
