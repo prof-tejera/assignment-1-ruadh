@@ -24,6 +24,7 @@ const intervalTimer = (timer, time, set, timeSetter, setSetter) => {
             // Exit the loop
             if (time <= 0 && set <= 0) {
                 clearInterval(timer.current);
+                // TO DO:  maybe return a "done" status?
             }
         }, 1000);
     } else {
@@ -36,7 +37,7 @@ const intervalTimer = (timer, time, set, timeSetter, setSetter) => {
 const countDown = (timer, setter, newTime) => {
     clearInterval(timer.current);
     if (newTime > 0) {
-        console.log(`running createTimer`);
+        console.log(`running countDown`);
         timer.current = setInterval(() => {
             setter(newTime--);
             if (newTime < 0) {
@@ -48,15 +49,19 @@ const countDown = (timer, setter, newTime) => {
     }
 }
 
-const countUp = (timer, setter, newTime) => {
+// TO DO:  refactor to merge with countUp?
+const countUp = (timer, setter, newTime, endTime) => {
     clearInterval(timer.current);
     if (newTime === 0) {
+        console.log(`running countUp`);
         timer.current = setInterval(() => {
             setter(newTime++);
+            if (newTime > endTime) {
+                clearInterval(timer.current);
+            }
         }, 1000);
     } else {
         setter(newTime);
-        clearInterval(timer.current);
     }
 }
 

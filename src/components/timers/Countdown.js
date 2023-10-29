@@ -11,7 +11,7 @@ import { countDown } from "../../utils/helpers";
 
 const Countdown = () => {
 
-    // Store current time and the countdown timer interval in state
+    // Store current time and the countdown timer (JS interval) in state
     const [currentTime, setCurrentTime] = useState('');
     const timer = useRef(null);
 
