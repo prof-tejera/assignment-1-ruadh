@@ -21,18 +21,19 @@ const Timer = styled.div`
 
 const TimerTitle = styled.div``;
 
+// TO DO:  change active and rest amounts for Tabata
 const TimersView = () => {
   const timers = [
     { title: "Stopwatch", C: <Stopwatch /> },
     { title: "Countdown", C: <Countdown /> },
     { title: "XY", C: <XY /> },
-    { title: "Tabata", C: <Tabata /> },
+    { title: "Tabata", C: <Tabata work='5' rest='2'/> },
   ];
 
   return (
     <Timers>
       {timers.map((timer) => (
-        <Timer key={`timer-${timer.title}`}>
+        <Timer key={`timer-${timer.title}` }>
           <TimerTitle>{timer.title}</TimerTitle>
           {timer.C}
         </Timer>
